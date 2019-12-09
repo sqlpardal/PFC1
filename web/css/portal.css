@@ -1,5 +1,11 @@
 /*//////////////////////////////////////////////////////////////////
+
+
+
+
 [ FONT ]*/
+
+
 
 @font-face {
   font-family: OpenSans-Regular;
@@ -16,6 +22,34 @@
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
+
+section{
+    background: #fff;
+  background: -webkit-linear-gradient(left, #6a11cb, #2575fc);
+  background: -o-linear-gradient(left, #6a11cb, #2575fc);
+  background: -moz-linear-gradient(left, #6a11cb, #2575fc);
+  background: linear-gradient(left, #6a11cb, #2575fc);
+  padding-right:50px;
+  color: #fff;
+    text-align: 60px;
+    font-size: 80;
+    
+    
+}
+header{
+    background: #fff;
+  background: -webkit-linear-gradient(left, #6a11cb, #2575fc);
+  background: -o-linear-gradient(left, #6a11cb, #2575fc);
+  background: -moz-linear-gradient(left, #6a11cb, #2575fc);
+  background: linear-gradient(left, #6a11cb, #2575fc);
+  padding-left: 1250px;
+  color: #fff;
+    text-align: 60px;
+    font-size: 80;
+    
+    
+}
+
 
 * {
 	margin: 0px; 
