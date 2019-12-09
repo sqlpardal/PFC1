@@ -1,0 +1,23 @@
+body{
+    background: #999999;
+    
+    
+}
+
+
+
+
+
+
+fieldset{
+   background: red; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right,red,red);
+  background: -webkit-linear-gradient(right,blue, blue);
+  background: -webkit-linear-gradient(right,blue, blue);
+  background: -webkit-linear-gradient(right,blue, blue);
+  background: -moz-linear-gradient(right,blue, blue, blue);
+  background: linear-gradient(to left, blue, red);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;        
+}
