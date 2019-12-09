@@ -9,7 +9,7 @@
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
-<%@page import="aluno.Login"%>
+<%@page import="pfc.Pfc"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -20,24 +20,24 @@
     <body>
         
          <%
-            Login bd = new Login();
-            bd.setLogEmail(request.getParameter("logemail"));
-            bd.setLogSenha(request.getParameter("logsenha"));
+            Pfc bd = new Pfc();
+            bd.setPnome(request.getParameter("email"));
+            bd.setPsenha(request.getParameter("senha"));
             boolean a = false;
             try {
                 Class.forName("com.mysql.jdbc.Driver");
-                Connection conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/boletim", "root", "");
-                String sqlConsulta = "SELECT * FROM login WHERE email LIKE '%" + bd.getLogEmail() + "%' AND senha LIKE '%" + bd.getLogSenha()+ "%'";
+                Connection conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/login", "root", "");
+                String sqlConsulta = "SELECT * FROM login WHERE email LIKE '%" + bd.getPnome() + "%' AND senha LIKE '%" + bd.getPsenha()+ "%'";
                 PreparedStatement stmt2 = conexao.prepareStatement(sqlConsulta);
                 ResultSet rs = stmt2.executeQuery();
                 while (rs.next()) {
                     a = true;
                     String email = rs.getString("email");
                     String senha = rs.getString("senha");
-                    if (bd.getLogEmail().equals(email) && bd.getLogSenha().equals(senha)) {
+                    if (bd.getPnome().equals(email) && bd.getPsenha().equals(senha)) {
                         
                        
-                        response.sendRedirect("menualuno.html");
+                        response.sendRedirect("menu.html");
                     }
                 }
                 if (a == false) {
